@@ -1,0 +1,866 @@
+{
+  "topics": [
+    {
+      "topic_name": "Communication System Fundamentals",
+      "summary": "Basic concept of a communication system including its block diagram, elements like transmitter, channel, receiver, and the need for modulation in communication."
+    },
+    {
+      "topic_name": "Random Variables and Probability",
+      "summary": "Concepts of random variables, random processes, CDF, PDF, mean, mean square, variance, and distributions like Gaussian and Rayleigh."
+    },
+    {
+      "topic_name": "Noise in Communication",
+      "summary": "Definition of noise, types of noise, white noise, signal-to-noise ratio (SNR) and its significance in communication systems."
+    },
+    {
+      "topic_name": "Signals and Signal Representation",
+      "summary": "Definition and classification of signals, time-domain and frequency-domain representations including unit impulse, unit step, sinc, rectangular pulse, exponential, and sinusoidal signals."
+    },
+    {
+      "topic_name": "Fourier Series and Transform",
+      "summary": "Trigonometric and exponential Fourier series, Fourier Transform, their properties, and application to signal analysis including frequency spectrum computation."
+    },
+    {
+      "topic_name": "Amplitude Modulation (AM)",
+      "summary": "Principle of AM, modulation index, sidebands, power relationships, frequency spectrum, square law modulator, envelope detector, and waveforms for different modulation indices."
+    },
+    {
+      "topic_name": "DSB-SC and SSB-SC Modulation",
+      "summary": "Double Sideband Suppressed Carrier and Single Sideband Suppressed Carrier modulation principles, balanced modulator, filter method, coherent detection, and power/bandwidth analysis."
+    },
+    {
+      "topic_name": "VSB Modulation",
+      "summary": "Vestigial Sideband modulation principle, why it is preferred for video signals, VSB modulator block diagram, and channel bandwidth."
+    },
+    {
+      "topic_name": "AM Superheterodyne Receiver",
+      "summary": "Superheterodyne principle, block diagram, local oscillator frequency, image frequency, image frequency rejection ratio (IFRR), and intermediate frequency concepts."
+    },
+    {
+      "topic_name": "Frequency Modulation (FM)",
+      "summary": "Principle of FM, frequency deviation, instantaneous frequency, FM spectrum, power calculation, channel bandwidth using Carson's rule, relationship between FM and PM, NBFM and WBFM."
+    },
+    {
+      "topic_name": "FM Generation and Detection",
+      "summary": "Armstrong FM transmitter, NBFM modulator, slope detector, Foster-Seeley discriminator, PLL detector, FM superheterodyne receiver, pre-emphasis and de-emphasis."
+    },
+    {
+      "topic_name": "Pulse Modulation",
+      "summary": "Sampling theorem, sampling methods, PAM, PWM, PPM generation principles, time division multiplexing (TDM) and frequency division multiplexing (FDM)."
+    },
+    {
+      "topic_name": "PCM and Quantization",
+      "summary": "Quantization process, PCM system block diagram, quantization noise, SNR of PCM, number of encoded bits, regenerative repeaters, and output SNR calculation."
+    },
+    {
+      "topic_name": "Digital Modulation",
+      "summary": "Principles of ASK (BASK), FSK (BFSK), PSK (BPSK, QPSK) including mathematical expressions, waveforms, modulator/demodulator diagrams, and signal space representations."
+    },
+    {
+      "topic_name": "Modern Communication Systems",
+      "summary": "Satellite communication using Kepler's laws, optical fiber communication (types, critical angle, acceptance angle, numerical aperture), mobile communication and frequency reuse."
+    }
+  ],
+  "questions": [
+    {
+      "question_text": "What is modulation? Mention the types of modulation.",
+      "difficulty": "easy",
+      "topics": ["Amplitude Modulation (AM)", "Communication System Fundamentals"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q1a" },
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q1b" },
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q1b-context" }
+      ]
+    },
+    {
+      "question_text": "What is noise in communication? Define and write the significance of signal-to-noise ratio (SNR).",
+      "difficulty": "easy",
+      "topics": ["Noise in Communication"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q1b" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1b" }
+      ]
+    },
+    {
+      "question_text": "Using the property of Fourier Transform, express the Fourier Transform of the signal f(t) = F[f(t+2) + f(t-2)].",
+      "difficulty": "medium",
+      "topics": ["Fourier Series and Transform"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q1c" }
+      ]
+    },
+    {
+      "question_text": "The maximum value of the envelope of an AM signal is 150mV and minimum value is 50mV. Compute the modulation index.",
+      "difficulty": "easy",
+      "topics": ["Amplitude Modulation (AM)"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q1d" }
+      ]
+    },
+    {
+      "question_text": "Define FM and state the types of FM.",
+      "difficulty": "easy",
+      "topics": ["Frequency Modulation (FM)"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q1e" }
+      ]
+    },
+    {
+      "question_text": "What is communication? Draw and explain the block diagram of a communication system. Also discuss any two reasons why modulation is needed in communication.",
+      "difficulty": "medium",
+      "topics": ["Communication System Fundamentals"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q2a" },
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q2a" },
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q3a" },
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q2a-i" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q2a" }
+      ]
+    },
+    {
+      "question_text": "Draw and label AM waveforms for modulation index m < 1 and m > 1. Draw and explain the circuit diagram of an Envelope detector and justify which modulation index is suitable to recover the message signal.",
+      "difficulty": "medium",
+      "topics": ["Amplitude Modulation (AM)"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q2b" },
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q2b" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q2b" },
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q4a" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q1c" }
+      ]
+    },
+    {
+      "question_text": "The CDF of a certain random variable y is F_y(y) = y²/2 for 0 < y ≤ 5. Find the values of mean, mean square and variance for the random variable y.",
+      "difficulty": "medium",
+      "topics": ["Random Variables and Probability"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q3a" }
+      ]
+    },
+    {
+      "question_text": "Evaluate the trigonometric Fourier series for a periodic gate pulse defined as x(t) = 1 for t between -τ/2 to τ/2 and x(t) = 0 for t between τ/2 to (T - τ/2). The period of the signal is T₀ = T.",
+      "difficulty": "hard",
+      "topics": ["Fourier Series and Transform"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q3b" },
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q3a" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q3b" }
+      ]
+    },
+    {
+      "question_text": "For an AM signal S(t) = [10 + 4cos200πt] cos1000πt: (i) Evaluate the frequency domain equation and sketch the frequency spectrum. (ii) Compute the channel bandwidth and total transmitted power.",
+      "difficulty": "hard",
+      "topics": ["Amplitude Modulation (AM)"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q4a" }
+      ]
+    },
+    {
+      "question_text": "What is DSBSC modulation? Draw and explain the block diagram of balanced modulator to generate a DSBSC signal.",
+      "difficulty": "medium",
+      "topics": ["DSB-SC and SSB-SC Modulation"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q4b" }
+      ]
+    },
+    {
+      "question_text": "A modulating signal is given as m(t) = 4cos(400πt) + 2cos(600πt) and carrier signal c(t) = cos(1000πt). (i) Evaluate the time domain expression of DSB-SC signal S(t) = m(t).c(t). (ii) Apply Fourier Transform to express the frequency domain equation and plot the frequency spectrum. (iii) Compute channel bandwidth needed. (iv) Find total transmitted power.",
+      "difficulty": "hard",
+      "topics": ["DSB-SC and SSB-SC Modulation"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q5a" }
+      ]
+    },
+    {
+      "question_text": "What is SSB-SC modulation technique? Draw and explain the Filter method of generating a SSB-SC signal.",
+      "difficulty": "medium",
+      "topics": ["DSB-SC and SSB-SC Modulation"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q5b" },
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q7a" }
+      ]
+    },
+    {
+      "question_text": "Explain the process of generating a NBFM signal with its mathematical expressions and diagram. Explain how it can be converted to WBFM and name the method.",
+      "difficulty": "hard",
+      "topics": ["Frequency Modulation (FM)", "FM Generation and Detection"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q6a" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q5b-ii" },
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q4b-ii" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q5a-i" }
+      ]
+    },
+    {
+      "question_text": "What is VSB Modulation? Why is it preferred for modulating video signals? Draw the block diagram of the VSB modulator.",
+      "difficulty": "medium",
+      "topics": ["VSB Modulation"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q6b" },
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q7b" }
+      ]
+    },
+    {
+      "question_text": "An FM signal is expressed as S(t) = 10cos[(2π1000t) + 5sin(2π50t)]. The frequency sensitivity of the modulator is kf = 5 Hz/V. (i) Find the maximum instantaneous frequency. (ii) Find total transmitted power. (iii) Compute channel bandwidth using Carson's rule. (iv) Find the expression of message signal m(t).",
+      "difficulty": "hard",
+      "topics": ["Frequency Modulation (FM)"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q7a" }
+      ]
+    },
+    {
+      "question_text": "With neat diagrams explain the relationship between FM and PM.",
+      "difficulty": "medium",
+      "topics": ["Frequency Modulation (FM)"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q7b" }
+      ]
+    },
+    {
+      "question_text": "Differentiate between random variable and random process.",
+      "difficulty": "easy",
+      "topics": ["Random Variables and Probability"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q1a" }
+      ]
+    },
+    {
+      "question_text": "Write any two Dirichlet's conditions for Fourier analysis.",
+      "difficulty": "easy",
+      "topics": ["Fourier Series and Transform"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q1c" }
+      ]
+    },
+    {
+      "question_text": "An AM signal requires a channel bandwidth of 10kHz. The highest frequency component present in the modulated signal is 15kHz. Compute the carrier frequency used in the modulation.",
+      "difficulty": "easy",
+      "topics": ["Amplitude Modulation (AM)"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q1d" }
+      ]
+    },
+    {
+      "question_text": "A message signal m(t) = 5cos2π200t and carrier signal c(t) = 10cos2π1000t. Compute the total transmitted powers if it is (i) SSBSC modulated and (ii) DSBSC modulated.",
+      "difficulty": "medium",
+      "topics": ["DSB-SC and SSB-SC Modulation"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q1e" }
+      ]
+    },
+    {
+      "question_text": "Given a message signal m(t) = 2cos2π10t + 4cos2π50t and carrier signal c(t) = 4cos2π500t. Evaluate the following: (i) Time domain expression when Amplitude modulated. (ii) Effective modulation index of AM. (iii) Time domain and frequency domain expressions when DSBSC modulated. (iv) Sketch the frequency spectrum of the DSBSC signal. (v) Time domain expression if SSBSC modulated.",
+      "difficulty": "hard",
+      "topics": ["Amplitude Modulation (AM)", "DSB-SC and SSB-SC Modulation"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q4a" }
+      ]
+    },
+    {
+      "question_text": "A coherent detector is used for demodulating the DSBSC signal. Explain with neat diagram and equations how we can recover the message signal.",
+      "difficulty": "medium",
+      "topics": ["DSB-SC and SSB-SC Modulation"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q4b" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q3a" },
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q3a-ii" }
+      ]
+    },
+    {
+      "question_text": "Consider a signal having a PDF f_v(v) = k v², 1 ≤ v ≤ 2. Find the value of k, expression of CDF, values of mean, mean square and variance for the random variable V.",
+      "difficulty": "hard",
+      "topics": ["Random Variables and Probability"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q5a" }
+      ]
+    },
+    {
+      "question_text": "A message signal m(t) and carrier signal c(t) = Ac cos2πfct are applied to a Square Law modulator. Construct a diagram and evaluate an expression to show how an AM signal can be generated.",
+      "difficulty": "medium",
+      "topics": ["Amplitude Modulation (AM)"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q5b" },
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q4a" }
+      ]
+    },
+    {
+      "question_text": "Given a signal g(t) = 2cos2πf₁t. Evaluate the Fourier Transform for the signal g(t) and g(t-T₀).",
+      "difficulty": "medium",
+      "topics": ["Fourier Series and Transform"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q3b-i" }
+      ]
+    },
+    {
+      "question_text": "Define the Unit step function and Sinc function with their mathematical expressions and waveforms.",
+      "difficulty": "easy",
+      "topics": ["Signals and Signal Representation"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q3b-ii" }
+      ]
+    },
+    {
+      "question_text": "Write the relationship between CDF and PDF.",
+      "difficulty": "easy",
+      "topics": ["Random Variables and Probability"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1a" }
+      ]
+    },
+    {
+      "question_text": "A time domain rectangular signal is given as X(t) = 3 rect(t/4). What will be its expression in frequency domain?",
+      "difficulty": "easy",
+      "topics": ["Fourier Series and Transform", "Signals and Signal Representation"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1b" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1a" }
+      ]
+    },
+    {
+      "question_text": "Define AM and compare AM and FM.",
+      "difficulty": "easy",
+      "topics": ["Amplitude Modulation (AM)", "Frequency Modulation (FM)"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1c" }
+      ]
+    },
+    {
+      "question_text": "Compare SSB-SC and VSB modulation techniques.",
+      "difficulty": "easy",
+      "topics": ["DSB-SC and SSB-SC Modulation", "VSB Modulation"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1d" }
+      ]
+    },
+    {
+      "question_text": "An FM signal is given as x(t) = 10cos[(2π10⁶t) + 8sin(2π10²t)]. Find the total power and channel bandwidth of the FM signal.",
+      "difficulty": "medium",
+      "topics": ["Frequency Modulation (FM)"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1e" }
+      ]
+    },
+    {
+      "question_text": "Find the minimum sampling frequency and sampling interval for x(t) = 2cos8000πt + 5cos3000πt.",
+      "difficulty": "medium",
+      "topics": ["Pulse Modulation"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1f" }
+      ]
+    },
+    {
+      "question_text": "What is quantisation error in PCM? Also mention the function of regenerative repeater.",
+      "difficulty": "easy",
+      "topics": ["PCM and Quantization"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1g" }
+      ]
+    },
+    {
+      "question_text": "For a sequence of message bits 100110, sketch the following line coding schemes: UniPolar NRZ and Bipolar RZ.",
+      "difficulty": "easy",
+      "topics": ["Digital Modulation"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1h" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1g" }
+      ]
+    },
+    {
+      "question_text": "Mention any two Kepler's laws of planetary motion in Satellite communication.",
+      "difficulty": "easy",
+      "topics": ["Modern Communication Systems"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1i" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q8a" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q8b-iii" }
+      ]
+    },
+    {
+      "question_text": "State the advantages and disadvantages of optical fiber communication.",
+      "difficulty": "easy",
+      "topics": ["Modern Communication Systems"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1j" }
+      ]
+    },
+    {
+      "question_text": "Draw and explain the block diagram of communication system. Mention types of modulation techniques. Also explain how modulation helps in the design of antenna.",
+      "difficulty": "medium",
+      "topics": ["Communication System Fundamentals"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q2a" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q2a" }
+      ]
+    },
+    {
+      "question_text": "What is the superheterodyne principle? With block diagram explain the working of AM super heterodyne receiver. Calculate the local oscillator frequency and image frequency for an input RF of 560kHz and IF of 455kHz.",
+      "difficulty": "hard",
+      "topics": ["AM Superheterodyne Receiver"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q2b" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q4a" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q2b" }
+      ]
+    },
+    {
+      "question_text": "State the properties of CDF and PDF. Write the mathematical expressions for computing mean, mean square and variance of a random variable X. Also discuss white noise and significance of SNR.",
+      "difficulty": "medium",
+      "topics": ["Random Variables and Probability", "Noise in Communication"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q3a" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q3a" }
+      ]
+    },
+    {
+      "question_text": "Consider a square law modulator with v₂ = v₁ + 0.1v₁². The BPF is an ideal unity gain filter with passband 800 Hz to 1200 Hz. Determine the modulation index, bandwidth and total power of the AM signal generated.",
+      "difficulty": "hard",
+      "topics": ["Amplitude Modulation (AM)"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q2b" }
+      ]
+    },
+    {
+      "question_text": "An AM signal is represented in time domain as x(t) = [10 + 4cos(2000πt) + 8cos(8000πt)] cos(20000πt). Sketch the spectrum, calculate effective modulation index, total power and transmission bandwidth.",
+      "difficulty": "hard",
+      "topics": ["Amplitude Modulation (AM)"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q3a" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q4b" }
+      ]
+    },
+    {
+      "question_text": "Consider a narrow band FM signal s(t) = 4cos[2π10⁶t + 0.3sin4π10³t]. A WBFM signal having a carrier frequency of 95 MHz and peak frequency deviation of 75kHz is generated. The frequency provided to the mixer is 5MHz. Draw a system to accomplish the process and find the required values of frequency multipliers.",
+      "difficulty": "hard",
+      "topics": ["FM Generation and Detection", "Frequency Modulation (FM)"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q4a-i" }
+      ]
+    },
+    {
+      "question_text": "Explain the principle of slope detector as FM demodulator with neat diagram.",
+      "difficulty": "medium",
+      "topics": ["FM Generation and Detection"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q4a-ii" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q5a-ii" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q5a-ii" }
+      ]
+    },
+    {
+      "question_text": "BASK modulation is used to modulate message bits. Write the expressions of the BASK signal, draw its waveform, modulator, demodulator and signal space diagram representation.",
+      "difficulty": "hard",
+      "topics": ["Digital Modulation"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q4b-i" }
+      ]
+    },
+    {
+      "question_text": "Explain with a neat block diagram the working principle of PCM system. A sinusoidal input x(t) = 2cos(2π100t) is to be transmitted using PCM. The maximum quantisation error is 0.5%. Compute the number of encoded bits in each PCM word and output SNR.",
+      "difficulty": "hard",
+      "topics": ["PCM and Quantization"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q5a" }
+      ]
+    },
+    {
+      "question_text": "Describe how PPM signal is generated from PWM with neat diagrams and waveforms.",
+      "difficulty": "medium",
+      "topics": ["Pulse Modulation"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q5b-i" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q6b" }
+      ]
+    },
+    {
+      "question_text": "Briefly discuss the principle of FDM system with neat block diagram.",
+      "difficulty": "medium",
+      "topics": ["Pulse Modulation"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q5b-ii" }
+      ]
+    },
+    {
+      "question_text": "With neat block diagram explain the working principle of a satellite communication system. Also explain why uplink frequency is higher than downlink frequency.",
+      "difficulty": "medium",
+      "topics": ["Modern Communication Systems"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q6a-i" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q8a" }
+      ]
+    },
+    {
+      "question_text": "Draw a diagram and explain the concept of frequency reuse in mobile communication.",
+      "difficulty": "medium",
+      "topics": ["Modern Communication Systems"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q6a-ii" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q1j" }
+      ]
+    },
+    {
+      "question_text": "Draw and explain the block diagram of optical fiber communication. Mention types of optical fibers. A multimode step-index fiber has glass core (n₁ = 1.45) and fused quartz cladding (n₂ = 1.56). Determine (i) Critical angle (ii) Acceptance angle (iii) Numerical aperture.",
+      "difficulty": "hard",
+      "topics": ["Modern Communication Systems"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q6b" },
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q8b" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q8b-i" }
+      ]
+    },
+    {
+      "question_text": "Draw a rectangular signal x(t) = 3 rect(t/4) and also draw its frequency spectrum.",
+      "difficulty": "easy",
+      "topics": ["Signals and Signal Representation", "Fourier Series and Transform"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1a" }
+      ]
+    },
+    {
+      "question_text": "A random signal X is characterised with PDF given as f_x(x) = 5x³ + 4x² between 0 and 1. What will be the value of P[X ≤ 1/2]?",
+      "difficulty": "medium",
+      "topics": ["Random Variables and Probability"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1c" }
+      ]
+    },
+    {
+      "question_text": "What is a Modem? State its application.",
+      "difficulty": "easy",
+      "topics": ["Modern Communication Systems"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1d" }
+      ]
+    },
+    {
+      "question_text": "The maximum and minimum peak values of the envelope of an AM signal are 10 volts and 2 volts respectively. Determine the modulation index.",
+      "difficulty": "easy",
+      "topics": ["Amplitude Modulation (AM)"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1e" }
+      ]
+    },
+    {
+      "question_text": "An FM signal is given as x(t) = 10cos[2π10⁶t + 8sin4π10³t]. Find the instantaneous frequency of the FM signal.",
+      "difficulty": "medium",
+      "topics": ["Frequency Modulation (FM)"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1f" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q1f" }
+      ]
+    },
+    {
+      "question_text": "Define BASK modulation with mathematical expression.",
+      "difficulty": "easy",
+      "topics": ["Digital Modulation"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1i" }
+      ]
+    },
+    {
+      "question_text": "Draw the block diagram of Armstrong FM transmitter and identify the relationship between FM and PM used in it. Discuss the principle of slope detector for FM demodulation.",
+      "difficulty": "hard",
+      "topics": ["FM Generation and Detection"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q5a" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q5b" }
+      ]
+    },
+    {
+      "question_text": "Derive the time domain expression for NBFM signal. Draw its frequency spectrum. A narrow band FM signal s(t) = 4cos[2π10⁶t + 0.3sin4π10³t] is passed through two frequency multipliers in series with order n1=3 and n2=5. Determine the final carrier frequency, frequency deviation and bandwidth for WBFM.",
+      "difficulty": "hard",
+      "topics": ["Frequency Modulation (FM)", "FM Generation and Detection"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q5b" }
+      ]
+    },
+    {
+      "question_text": "Explain different types of sampling techniques with proper diagrams and waveforms. A signal x(t) = 2cos8000πt · 0.5cos²3000πt is sampled at a rate 1000 samples per second. Will the signal show aliasing effect? Justify.",
+      "difficulty": "hard",
+      "topics": ["Pulse Modulation"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q6a" }
+      ]
+    },
+    {
+      "question_text": "A Television signal having a bandwidth of 4.2 MHz is transmitted using binary PCM system. Given that the number of quantization levels is 512. Determine (i) code word length (ii) final bit rate (iii) transmission bandwidth (iv) output signal to quantization noise ratio.",
+      "difficulty": "hard",
+      "topics": ["PCM and Quantization"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q7a" }
+      ]
+    },
+    {
+      "question_text": "BPSK modulation technique is used for modulating a sequence of message bits 1011. Discuss the principle with equations, waveforms and modulator diagram. Also sketch the signal space diagram.",
+      "difficulty": "hard",
+      "topics": ["Digital Modulation"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q7b" },
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q8a" }
+      ]
+    },
+    {
+      "question_text": "Find the Fourier Transform of x(t) = e^(-a|t|)u(t) for a > 0. Also draw its magnitude spectrum. Write the expression of the complex exponential Fourier series for a signal x(t).",
+      "difficulty": "hard",
+      "topics": ["Fourier Series and Transform"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q3b" }
+      ]
+    },
+    {
+      "question_text": "Define the functions: (a) Unit step function (b) Sinc function.",
+      "difficulty": "easy",
+      "topics": ["Signals and Signal Representation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q1A" }
+      ]
+    },
+    {
+      "question_text": "The CDF of a random variable X is F_X(X) = 1/2[(x/2)+1] for -2 ≤ x ≤ 2. Show that the area under PDF is unity.",
+      "difficulty": "medium",
+      "topics": ["Random Variables and Probability"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q1B" }
+      ]
+    },
+    {
+      "question_text": "State the significance of Fourier Analysis in communication.",
+      "difficulty": "easy",
+      "topics": ["Fourier Series and Transform"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q1C" }
+      ]
+    },
+    {
+      "question_text": "The maximum value of the envelope of an AM signal is 100mV and minimum value is -50mV. Find the modulation index and justify whether we can recover the message signal with an Envelope detector.",
+      "difficulty": "medium",
+      "topics": ["Amplitude Modulation (AM)"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q1D" }
+      ]
+    },
+    {
+      "question_text": "With the help of a neat block diagram show the working principle of a Balanced Modulator for the generation of DSB-SC modulated waveform.",
+      "difficulty": "medium",
+      "topics": ["DSB-SC and SSB-SC Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q1E" }
+      ]
+    },
+    {
+      "question_text": "The CDF of a certain random variable Z is F_Z(Z) = z³/12 for 0 ≤ z ≤ 1. Find the expression of PDF, values of mean, mean square and variance for the random variable Z.",
+      "difficulty": "medium",
+      "topics": ["Random Variables and Probability"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q2a" }
+      ]
+    },
+    {
+      "question_text": "Using properties of Fourier Transform, write the Fourier Transform of: (A) If G(f) is the FT of g(t) then what will be the F[g(t+2)]; (B) F[4sin(2π500t)].",
+      "difficulty": "medium",
+      "topics": ["Fourier Series and Transform"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q2b" }
+      ]
+    },
+    {
+      "question_text": "Write the expressions of the constants a₀, aₙ and bₙ of trigonometric Fourier series for a periodic signal x(t). Also mention the representation of Exponential Fourier series.",
+      "difficulty": "easy",
+      "topics": ["Fourier Series and Transform"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q3b" }
+      ]
+    },
+    {
+      "question_text": "Mention the Fourier Transform of a Rectangular function g(t) = Arect(t/T). Also sketch the time domain and frequency domain representation of the signal g(t).",
+      "difficulty": "medium",
+      "topics": ["Fourier Series and Transform", "Signals and Signal Representation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q4b" }
+      ]
+    },
+    {
+      "question_text": "A modulating signal is given as m(t) = 2cos(2π500t) + 4cos(2π200t) and carrier signal c(t) = cos(2π1000t). (i) Evaluate the time domain expression of AM signal. (ii) Apply Fourier Transform to express the frequency domain equation and sketch the frequency spectrum of the AM signal. (iii) Find total transmitted power.",
+      "difficulty": "hard",
+      "topics": ["Amplitude Modulation (AM)"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q5a" }
+      ]
+    },
+    {
+      "question_text": "Explain with neat diagram and waveforms how we can recover message signal using an Envelope detector when an AM signal is applied to it.",
+      "difficulty": "medium",
+      "topics": ["Amplitude Modulation (AM)"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q5b" }
+      ]
+    },
+    {
+      "question_text": "A cosine carrier signal has a frequency 200 kHz and peak amplitude of 10 V. It is modulated by the cosine baseband signal with frequency 10 kHz and peak amplitude 5V. (i) Write the time domain expression for DSBSC signal. (ii) Apply Fourier transform and find the frequency domain equation. (iii) Sketch the frequency spectrum of the modulated signal.",
+      "difficulty": "hard",
+      "topics": ["DSB-SC and SSB-SC Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q6a" }
+      ]
+    },
+    {
+      "question_text": "With neat diagram and equations explain the coherent detector method to demodulate a DSB-SC signal. What is the quadrature null effect?",
+      "difficulty": "hard",
+      "topics": ["DSB-SC and SSB-SC Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q6b" }
+      ]
+    },
+    {
+      "question_text": "What is SSB-SC modulation technique? Draw and explain the Filter method of generating a SSB-SC signal. A carrier signal c(t) = Accos2πfct has a frequency 200 kHz and amplitude 10 V. It is modulated by the baseband signal m(t) = 2cos400πt + 4sin200πt. Express the Hilbert Transform of the message signal and write the expression of the LSB signal generated.",
+      "difficulty": "hard",
+      "topics": ["DSB-SC and SSB-SC Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q7a" }
+      ]
+    },
+    {
+      "question_text": "What is VSB Modulation? Why is it preferred for modulating video signals? Draw the frequency spectrum of VSB and mention the channel bandwidth needed.",
+      "difficulty": "medium",
+      "topics": ["VSB Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "midsem", "season": "spring", "question_number": "Q7b" }
+      ]
+    },
+    {
+      "question_text": "If G(f) is the F[g(t)], then using the property of Fourier Transform, express the F[g(t) * cos2πf₀t].",
+      "difficulty": "medium",
+      "topics": ["Fourier Series and Transform"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q1b" }
+      ]
+    },
+    {
+      "question_text": "A carrier signal of power 125 W is modulated by an information signal using SSB-SC modulation and DSB-SC modulation techniques. Calculate the total power transmitted in each technique when the depth of modulation is 50%.",
+      "difficulty": "medium",
+      "topics": ["DSB-SC and SSB-SC Modulation", "Amplitude Modulation (AM)"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q1d" }
+      ]
+    },
+    {
+      "question_text": "Two signals each band-limited to 4 kHz and 8 kHz are transmitted through a FDM channel using SSB-SC and VSB-SC respectively. Determine the minimum bandwidth of FDM channel assuming a guard band of 0.4 kHz and vestige bandwidth of 0.2 kHz.",
+      "difficulty": "hard",
+      "topics": ["DSB-SC and SSB-SC Modulation", "VSB Modulation", "Pulse Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q1e" }
+      ]
+    },
+    {
+      "question_text": "An FM signal is given by S_FM(t) = 25cos[2π10⁶t + 5sin2π10³t]. Find the instantaneous frequency of FM signal.",
+      "difficulty": "medium",
+      "topics": ["Frequency Modulation (FM)"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q1f" }
+      ]
+    },
+    {
+      "question_text": "State the process of quantization in PCM with neat diagram.",
+      "difficulty": "easy",
+      "topics": ["PCM and Quantization"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q1g" }
+      ]
+    },
+    {
+      "question_text": "A signal x(t) = 2cos(2π200t) + 5cos(2π400t) is sampled at a rate of 900 samples per second. Find the Nyquist rate needed and justify whether it will show aliasing effect.",
+      "difficulty": "medium",
+      "topics": ["Pulse Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q1h" }
+      ]
+    },
+    {
+      "question_text": "Write the mathematical expressions of BASK and BFSK signals for bit 1 and bit 0.",
+      "difficulty": "easy",
+      "topics": ["Digital Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q1i" }
+      ]
+    },
+    {
+      "question_text": "A modulating signal is given as m(t) = 5cos(500πt) and carrier signal c(t) = 10cos(1000πt). (i) Write the time domain equation for AM signal, DSB-SC signal and SSB-SC signal. (ii) Sketch frequency spectrum of AM signal. (iii) Using the above spectrum sketch spectrums of DSB-SC and SSB-SC signal.",
+      "difficulty": "hard",
+      "topics": ["Amplitude Modulation (AM)", "DSB-SC and SSB-SC Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q4a" }
+      ]
+    },
+    {
+      "question_text": "Explain with neat block diagram the working principle of: (i) Envelope detector (ii) Coherent detector.",
+      "difficulty": "medium",
+      "topics": ["Amplitude Modulation (AM)", "DSB-SC and SSB-SC Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q4b" }
+      ]
+    },
+    {
+      "question_text": "Derive the time domain expressions of NBFM signal. Draw its frequency spectrum. With a neat block diagram briefly state the principle of slope detector method of demodulating FM signal.",
+      "difficulty": "hard",
+      "topics": ["Frequency Modulation (FM)", "FM Generation and Detection"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q5a" }
+      ]
+    },
+    {
+      "question_text": "Explain with a neat block diagram the working principle of Armstrong method for generation of WBFM. In an Armstrong FM transmitter, determine the values of multiplier constants n₁ and n₂ to generate a FM signal of carrier frequency 90MHz and frequency deviation Δf = 75 kHz. Given: message signal 60Hz to 30 kHz, f_c1 = 35 kHz, β₁ = 0.5, f_c2 = 25 MHz.",
+      "difficulty": "hard",
+      "topics": ["FM Generation and Detection"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q5b" }
+      ]
+    },
+    {
+      "question_text": "State and prove sampling theorem of low pass signals with equations and diagrams.",
+      "difficulty": "hard",
+      "topics": ["Pulse Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q6a" }
+      ]
+    },
+    {
+      "question_text": "What is pulse modulation? Name different pulse modulation techniques. Explain the generation of PAM signals with neat diagrams and waveforms.",
+      "difficulty": "medium",
+      "topics": ["Pulse Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q6b" }
+      ]
+    },
+    {
+      "question_text": "State the principles of Frequency Division Multiplexing and Time Division Multiplexing. Three signals x₁(t), x₂(t) and x₃(t) are time division multiplexed and transmitted. Construct a block diagram to implement the process and explain how the TDM system works.",
+      "difficulty": "hard",
+      "topics": ["Pulse Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q7a" }
+      ]
+    },
+    {
+      "question_text": "Derive the expressions of output signal to noise ratio (SNR) of a PCM system. An analog signal having amplitude ranging from -V to +V is transmitted using PCM. The maximum tolerable error is 0.4% of peak signal amplitude. Find the number of encoded bits needed.",
+      "difficulty": "hard",
+      "topics": ["PCM and Quantization"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q7b" }
+      ]
+    },
+    {
+      "question_text": "Message bits 1011 are being transmitted using BPSK modulation scheme. (i) Sketch the message signal as Polar NRZ waveform, carrier signal waveform and the BPSK waveform. (ii) Express the principle of BPSK with equations and signal space diagrams. (iii) Illustrate how BPSK can be demodulated using a coherent detection method.",
+      "difficulty": "hard",
+      "topics": ["Digital Modulation"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q8a" }
+      ]
+    },
+    {
+      "question_text": "Draw and explain the block diagram of optical fiber communication system. A multimode step-index fiber has glass core (n₁ = 1.4) and fused quartz cladding (n₂ = 1.3). Determine (i) Critical angle (ii) Acceptance angle. Also state any two Kepler's Laws for satellite communication.",
+      "difficulty": "hard",
+      "topics": ["Modern Communication Systems"],
+      "pyq_sources": [
+        { "year": 2026, "exam_type": "endsem", "season": "spring", "question_number": "Q8b" }
+      ]
+    }
+  ]
+}

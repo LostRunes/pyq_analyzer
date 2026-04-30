@@ -1,0 +1,832 @@
+{
+  "topics": [
+    {
+      "topic_name": "Database System Fundamentals",
+      "summary": "Introduction to database systems, distinction between database and DBMS, purposes of DBMS, components of DBMS, storage manager, query processor, and the file processing system vs DBMS."
+    },
+    {
+      "topic_name": "Data Models and Abstraction",
+      "summary": "Three-schema architecture (external, conceptual, internal levels), data independence (logical and physical), levels of abstraction, and various data models used in database design."
+    },
+    {
+      "topic_name": "ER and EER Modeling",
+      "summary": "Entity-Relationship model concepts including entities, attributes (simple, composite, multi-valued, derived), relationships, cardinality, participation constraints, weak entity sets, recursive relationships, aggregation, and Extended ER (EER) notations."
+    },
+    {
+      "topic_name": "ER to Relational Schema Mapping",
+      "summary": "Converting ER and EER diagrams into relational schemas, identifying primary keys and foreign keys from ER constructs, and handling weak entities and relationship sets during mapping."
+    },
+    {
+      "topic_name": "Relational Model",
+      "summary": "Relational data model concepts including relations, schemas, instances, keys (super key, candidate key, primary key, compound key, composite key), integrity rules (entity integrity, referential integrity), and foreign key constraints."
+    },
+    {
+      "topic_name": "Relational Algebra",
+      "summary": "Set and relational operators including selection, projection, Cartesian product, join (natural join, equi-join, outer join), union, difference, intersection, and division. Writing relational algebra expressions for given queries."
+    },
+    {
+      "topic_name": "Relational Calculus",
+      "summary": "Tuple relational calculus and domain relational calculus expressions, writing calculus queries for database retrieval problems."
+    },
+    {
+      "topic_name": "SQL",
+      "summary": "Structured Query Language including DDL (CREATE, ALTER), DML (SELECT, INSERT, UPDATE, DELETE), aggregate functions, GROUP BY, HAVING, nested subqueries, joins, NULL values, views, and integrity constraints in SQL."
+    },
+    {
+      "topic_name": "Functional Dependencies",
+      "summary": "Functional dependencies, Armstrong's axioms (reflexivity, augmentation, transitivity), additional inference rules, closure of a set of FDs, closure of attribute sets, and canonical (minimal) cover."
+    },
+    {
+      "topic_name": "Normalization",
+      "summary": "Normal forms: 1NF, 2NF, 3NF, BCNF, 4NF, 5NF. Identifying partial and transitive dependencies. Decomposing relations into higher normal forms. Understanding which normal form is adequate for relational database design."
+    },
+    {
+      "topic_name": "Decomposition",
+      "summary": "Lossless-join decomposition and dependency-preserving decomposition. Checking whether a given decomposition is lossless or lossy, and whether it preserves all functional dependencies."
+    },
+    {
+      "topic_name": "Transaction Management",
+      "summary": "Concepts of transactions, ACID properties (Atomicity, Consistency, Isolation, Durability), transaction states, and their importance in ensuring database reliability."
+    },
+    {
+      "topic_name": "Concurrency Control",
+      "summary": "Serializability (conflict and view), precedence graphs, problems in concurrent execution (lost update, dirty read, incorrect summary), two-phase locking (2PL) protocol, and timestamp-based concurrency control including Thomas Write Rule."
+    },
+    {
+      "topic_name": "Recovery Management",
+      "summary": "Database recovery techniques, logging (undo, redo, undo-redo), transaction rollback, crash recovery, and the role of the log in restoring database consistency after failures."
+    },
+    {
+      "topic_name": "Storage and File Structures",
+      "summary": "Physical storage media overview, RAID levels, disk storage concepts, blocking factor, record organization, and multi-level index file calculations."
+    },
+    {
+      "topic_name": "Indexing",
+      "summary": "Primary and secondary index structures, multi-level indexes, B-trees and B+ trees (insertion, deletion, structure, order), hash-based indexing vs tree-based indexing."
+    },
+    {
+      "topic_name": "Views and Data Independence",
+      "summary": "Database views, how views support logical data independence, and the relationship between views and the three-schema architecture."
+    },
+    {
+      "topic_name": "Application Architecture",
+      "summary": "Two-tier and three-tier application architectures, their differences, and suitability for various application types including web applications."
+    }
+  ],
+  "questions": [
+    {
+      "question_text": "Discuss the importance of data model in database design.",
+      "difficulty": "easy",
+      "topics": ["Database System Fundamentals", "Data Models and Abstraction"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q1a" }
+      ]
+    },
+    {
+      "question_text": "Mention the SQL command for adding a check constraint (salary greater than 10000) to an existing Emp table.",
+      "difficulty": "easy",
+      "topics": ["SQL"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q1b" }
+      ]
+    },
+    {
+      "question_text": "Differentiate between CHAR and VARCHAR datatypes.",
+      "difficulty": "easy",
+      "topics": ["SQL"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q1c" }
+      ]
+    },
+    {
+      "question_text": "Given the basic ER and relational models, which of the following is INCORRECT? i. An attribute of an entity can have more than one value. ii. An attribute of an entity can be composite. iii. In a row of a relational table, an attribute can have more than one value. iv. In a row of a relational table, an attribute can have exactly one value or a NULL value.",
+      "difficulty": "easy",
+      "topics": ["ER and EER Modeling", "Relational Model"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q1d" }
+      ]
+    },
+    {
+      "question_text": "In a shop, an employee may manage many customers. However, a customer can be managed by only one employee. Further, every customer must be assigned to an employee however the same is not mandatory for every employee. Which one of the following correctly represents the cardinality and participation for the relationship between employee and customer? i. 1:1, total, partial  ii. 1:1, partial, partial  iii. 1:M, partial, total  iv. 1:M, total, partial",
+      "difficulty": "medium",
+      "topics": ["ER and EER Modeling"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q1e" }
+      ]
+    },
+    {
+      "question_text": "Consider the following schema: Supplier(sid, sname, address), Parts(pid, pname, color), Catalog(sid, pid, cost). Solve the following queries using relational algebra as well as SQL expressions: i. Find the names of suppliers who supply some red part. ii. Find the pids of parts supplied by at least two different suppliers.",
+      "difficulty": "hard",
+      "topics": ["Relational Algebra", "SQL"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q2a" }
+      ]
+    },
+    {
+      "question_text": "What are the differences between equi-join and natural join operation? Explain with the help of an example.",
+      "difficulty": "easy",
+      "topics": ["Relational Algebra"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q2b" }
+      ]
+    },
+    {
+      "question_text": "Explain different levels of abstraction and levels of data independence with respect to a Library database system.",
+      "difficulty": "medium",
+      "topics": ["Data Models and Abstraction"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q3a" }
+      ]
+    },
+    {
+      "question_text": "Discuss the purpose and components of storage manager and query processor.",
+      "difficulty": "medium",
+      "topics": ["Database System Fundamentals"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q3b" }
+      ]
+    },
+    {
+      "question_text": "Consider a database that consists of the following relations: Supplier(sno, sname), Parts(pno, pname), Project(jno, jname), Supply(sno, pno, jno). Solve the following queries using relational calculus expressions: i. Retrieve the part numbers that are supplied to exactly two projects. ii. Retrieve the part numbers that are supplied by every supplier. iii. Retrieve the project names that are supplied by supplier 'S12' only.",
+      "difficulty": "hard",
+      "topics": ["Relational Calculus"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q4a" }
+      ]
+    },
+    {
+      "question_text": "What is a foreign key constraint? Why are such constraints important? What is referential integrity?",
+      "difficulty": "easy",
+      "topics": ["Relational Model"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q4b" }
+      ]
+    },
+    {
+      "question_text": "Consider a Conference database where researchers submit research papers for review. The requirements include: Authors identified by email id with first and last names; each paper has a unique id, title, abstract, and file name; a paper may have multiple authors with one designated as contact author; reviewers identified by email with name, phone, affiliation, and topics of interest; each paper assigned 2-4 reviewers who rate on technical merit, readability, originality, and relevance; each review has comments for committee only and feedback for authors. Design an ER diagram for the conference database.",
+      "difficulty": "hard",
+      "topics": ["ER and EER Modeling"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q5a" }
+      ]
+    },
+    {
+      "question_text": "Convert the Conference database ER diagram into relational schemas and specify primary and foreign keys.",
+      "difficulty": "hard",
+      "topics": ["ER to Relational Schema Mapping"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "midsem", "season": "spring", "question_number": "Q5b" }
+      ]
+    },
+    {
+      "question_text": "We can convert weak entity sets into strong entity sets by simply adding the appropriate attributes. Then, why are weak entity sets needed?",
+      "difficulty": "medium",
+      "topics": ["ER and EER Modeling"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q1a" },
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q1b" }
+      ]
+    },
+    {
+      "question_text": "If a user creates relation r1, and includes a foreign key referencing another relation r2, what authorization privilege is required for the user regarding r2? Additionally, why is it not advisable to permit this without the need for such authorization?",
+      "difficulty": "medium",
+      "topics": ["Relational Model"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q1b" }
+      ]
+    },
+    {
+      "question_text": "Relationships can have attributes. What are they called and give one example where this is required.",
+      "difficulty": "easy",
+      "topics": ["ER and EER Modeling"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q1c" }
+      ]
+    },
+    {
+      "question_text": "What is the difference between compound key and composite key?",
+      "difficulty": "easy",
+      "topics": ["Relational Model"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q1d" }
+      ]
+    },
+    {
+      "question_text": "Consider a relation R with attributes {a1, a2, a3, ..., an}. Determine the total number of super keys for relation R.",
+      "difficulty": "medium",
+      "topics": ["Relational Model"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q1e" }
+      ]
+    },
+    {
+      "question_text": "The division operator in relational algebra, denoted by ÷, is defined as follows. Let r(R) and s(S) be relations with attribute sets R and S respectively where S ⊆ R. A tuple t ∈ r÷s iff: t ∈ Π(R-S)(r) and for every tuple ts ∈ s, there is a tuple tr ∈ r satisfying tr[S] = ts[S] and tr[R-S] = t. A. Write a relational algebra expression using the division operator to find the IDs of all students who have taken all Comp. Sci. courses. B. Without using division, show how to write the above query in relational algebra. C. Write the pseudocode to efficiently evaluate the division operator.",
+      "difficulty": "hard",
+      "topics": ["Relational Algebra"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q2" }
+      ]
+    },
+    {
+      "question_text": "Assume we have the following application that models soccer teams, the games they play, and the players in each team: Each team has an ID, name, main stadium, and city. Each team has many players, and each player belongs to one team with attributes number, name, DoB, start year, and shirt number. Teams play matches with a host and guest team in the host's stadium. For each match, track: date, final result, players participated with goals, yellow/red cards, substitutions with time. Each match has exactly three referees with ID, name, DoB, and years of experience, one being the main referee. A. Design an ER diagram. B. Convert the ER diagram into relational schemas with primary keys.",
+      "difficulty": "hard",
+      "topics": ["ER and EER Modeling", "ER to Relational Schema Mapping"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q3" }
+      ]
+    },
+    {
+      "question_text": "Explain the significance of each level and data independence at each level in the 3-Level Abstraction of a Database, and support your explanation with a diagram.",
+      "difficulty": "medium",
+      "topics": ["Data Models and Abstraction"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q4" }
+      ]
+    },
+    {
+      "question_text": "Using the university schema (classroom, department, course, instructor, section, teaches, student, takes, advisor, time_slot, prereq), write the following queries in relational algebra or SQL: I. Find the ID and name of each instructor in the Physics department. II. Find the set of all courses taught in the autumn semester 2023, the spring semester 2021, or both. III. Find the ID and name of each student who has taken at least one course in the 'Comp. Sci.' department. IV. Find the names of all instructors in the computer science department together with the course id of all courses they taught. V. Find the ID and name of each student who has not taken any course section in the year 2023.",
+      "difficulty": "hard",
+      "topics": ["Relational Algebra", "SQL"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "midsem", "season": "spring", "question_number": "Q5" }
+      ]
+    },
+    {
+      "question_text": "Using Armstrong's axioms, prove that if A→B and BC→D then AC→D.",
+      "difficulty": "medium",
+      "topics": ["Functional Dependencies"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q1a" }
+      ]
+    },
+    {
+      "question_text": "What are recursive relationships? Give one example where this is required.",
+      "difficulty": "easy",
+      "topics": ["ER and EER Modeling"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q1c" }
+      ]
+    },
+    {
+      "question_text": "Explain the difference between two-tier and three-tier application architectures. Which is better suited for web applications?",
+      "difficulty": "medium",
+      "topics": ["Application Architecture"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q1d" }
+      ]
+    },
+    {
+      "question_text": "Consider a relation R with attributes {a1, a2, a3, a4, a5} and a4 as the primary key. Determine the total number of super keys for relation R.",
+      "difficulty": "medium",
+      "topics": ["Relational Model"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q1e" }
+      ]
+    },
+    {
+      "question_text": "An educational institute database needs to store information about faculty members (faculty-id, faculty-name, doj, specialization); departments (dept-id, dept-name); projects (proj-id, proj-name, proj-location); and children of faculty members (child-name, child-age). A department can have many faculty members and a faculty member can teach in more than one department. Faculty members can work on different projects. A department can have many projects but a project belongs to at most one department. Each department is managed by one HOD who is a faculty member. A child is identified uniquely by name when the parent faculty member is known. We are not interested in a child's information once the parent leaves the institute. i) Draw the ER diagram. ii) Translate the ER diagram into relations with primary and foreign keys.",
+      "difficulty": "hard",
+      "topics": ["ER and EER Modeling", "ER to Relational Schema Mapping"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q2" }
+      ]
+    },
+    {
+      "question_text": "Explain the Database System Architecture and its significance of each level. Support your explanation with a diagram.",
+      "difficulty": "medium",
+      "topics": ["Data Models and Abstraction"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q3" }
+      ]
+    },
+    {
+      "question_text": "Consider the following relational database schema: passenger(pid, pname, pgender, pcity), agency(aid, aname, acity), flight(fid, fdate, time, src, dest), booking(pid, aid, fid, fdate). Answer using relational algebra or SQL: a. Find the agency names for agencies located in the same city as passenger with passenger id 123. b. Get the details about all flights from Chennai to New Delhi. c. Find only the flight numbers for passenger with pid 123 for flights to Chennai before 06/11/2020. d. Find the passenger names for passengers who have bookings on at least one flight. e. Find the passenger names for those who do not have any bookings in any flights.",
+      "difficulty": "hard",
+      "topics": ["Relational Algebra", "SQL"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q4" }
+      ]
+    },
+    {
+      "question_text": "Consider two entity sets A and B that both have the attribute X. a. If the two X's are completely unrelated, how should the design be improved? b. If the two X's represent the same property applicable to both A and B, how should the design be improved? Consider three sub-cases: i. X is the primary key for A but not B. ii. X is the primary key for both A and B. iii. X is not the primary key for A nor for B.",
+      "difficulty": "hard",
+      "topics": ["ER and EER Modeling", "Relational Model"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "midsem", "season": "spring", "question_number": "Q5" }
+      ]
+    },
+    {
+      "question_text": "A minimum cardinality of 0 specifies ______ type of participation.",
+      "difficulty": "easy",
+      "topics": ["ER and EER Modeling"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1a" }
+      ]
+    },
+    {
+      "question_text": "Let E1 and E2 be two entity sets in an ER diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this situation in the relational model?",
+      "difficulty": "medium",
+      "topics": ["ER to Relational Schema Mapping", "ER and EER Modeling"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1b" }
+      ]
+    },
+    {
+      "question_text": "Consider the relations Stud(roll, name, address) and Enroll(roll, course_no, course_name). The numbers of tuples in Stud and Enroll tables are 120 and 8 respectively. What are the maximum and minimum numbers of tuples that can be presented in Stud NATURAL JOIN Enroll?",
+      "difficulty": "medium",
+      "topics": ["Relational Algebra"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1c" }
+      ]
+    },
+    {
+      "question_text": "Which normal form is considered adequate for normal relational database design? Justify your answer.",
+      "difficulty": "medium",
+      "topics": ["Normalization"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1d" },
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q5b" }
+      ]
+    },
+    {
+      "question_text": "Consider the relation R(E, F, G, H, I, J, K, L, M, N) and the set of functional dependencies {EF→G, F→IJ, EH→KL, K→M, L→N}. What is the candidate key for R?",
+      "difficulty": "hard",
+      "topics": ["Functional Dependencies", "Normalization"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1e" }
+      ]
+    },
+    {
+      "question_text": "What is a view? How do views support logical data independence?",
+      "difficulty": "medium",
+      "topics": ["Views and Data Independence", "SQL"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1f" }
+      ]
+    },
+    {
+      "question_text": "Find the equivalent query in relational algebra for the SQL query: SELECT DISTINCT a1, a2, .. am FROM R1, R2, .. Rn WHERE P;",
+      "difficulty": "medium",
+      "topics": ["Relational Algebra", "SQL"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1g" }
+      ]
+    },
+    {
+      "question_text": "How is the log used in transaction rollback and crash recovery?",
+      "difficulty": "medium",
+      "topics": ["Recovery Management"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1h" }
+      ]
+    },
+    {
+      "question_text": "Explain what a RAID system is and how it improves performance and reliability.",
+      "difficulty": "medium",
+      "topics": ["Storage and File Structures"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1i" }
+      ]
+    },
+    {
+      "question_text": "Consider a B+ tree in which the maximum number of keys in a node is 5. What is the minimum number of keys in any non-root node?",
+      "difficulty": "medium",
+      "topics": ["Indexing"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q1j" }
+      ]
+    },
+    {
+      "question_text": "Create a B-Tree with order 5 for the data members: 10, 25, 34, 23, 56, 45, 76, 84, 41, 74, 17. Also, draw the B-Tree after the deletion of data item 17 followed by deletion of data item 10.",
+      "difficulty": "hard",
+      "topics": ["Indexing"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q2a" }
+      ]
+    },
+    {
+      "question_text": "What do you mean by integrity constraints? Explain each type with a suitable example.",
+      "difficulty": "medium",
+      "topics": ["Relational Model", "SQL"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q2b" }
+      ]
+    },
+    {
+      "question_text": "Consider the following relations: Student(snum, sname, major, level, age), Class(cname, time, room, fid), Enrolled(snum, cname), Faculty(fid, fname, deptid). Write the following queries in relational algebra: a. Find the names of all Junior level students who are enrolled in a class taught by 'Mihir'. b. Find the names of all classes that either conducted in room 'A107' or have 5 or more students enrolled. c. Find the names of all students who are enrolled in 2 classes that are conducted at the same time. d. Find the level and the average age of students for that level, for each level. e. Find the names of students not enrolled in any class.",
+      "difficulty": "hard",
+      "topics": ["Relational Algebra"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q3a" }
+      ]
+    },
+    {
+      "question_text": "Explain the join and selection operators in a RDBMS. How can join operators be used to simulate a selection?",
+      "difficulty": "medium",
+      "topics": ["Relational Algebra"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q3b" }
+      ]
+    },
+    {
+      "question_text": "Consider the relation Stud(Roll, Name, Course, Grade) with the following functional dependencies: Name, Course → Grade; Roll, Course → Grade; Name → Roll; Roll → Name. What will be the highest normal form of this relation?",
+      "difficulty": "hard",
+      "topics": ["Normalization", "Functional Dependencies"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q4a" }
+      ]
+    },
+    {
+      "question_text": "Consider the relation R(A, B, C, D, E) with functional dependencies {AB→C, C→E, B→D, E→A}. If the relation R is decomposed to R1(B, C, D) and R2(A, C, E), check whether the decomposition is lossless or not. Also, check whether the decomposition is dependency preserving or not.",
+      "difficulty": "hard",
+      "topics": ["Decomposition", "Functional Dependencies"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q4b" }
+      ]
+    },
+    {
+      "question_text": "Consider the schedules S1 and S2 for the transactions T1, T2 and T3. S1: r1(x), r3(y), r3(x), r2(y), r2(z), w3(y), w2(z), r1(z), w1(x), w1(z). S2: r1(x), r3(y), r2(y), r3(x), r1(z), r2(z), w3(y), w1(x), w2(z), w1(z). Which of the schedules is conflict serializable?",
+      "difficulty": "hard",
+      "topics": ["Concurrency Control"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q5a" }
+      ]
+    },
+    {
+      "question_text": "In timestamp-based concurrency control, transactions are assigned a timestamp at startup. How is it used to ensure serializability? Explain with a suitable example. How does the Thomas Write Rule improve concurrency?",
+      "difficulty": "hard",
+      "topics": ["Concurrency Control"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q5b" }
+      ]
+    },
+    {
+      "question_text": "Draw an ER diagram for the airport database with the following details: Every airplane has a registration number and is of a specific model. The airport accommodates a number of airplane models, each identified by a model number with a capacity and weight. A number of technicians work at the airport with name, SSN, address, phone number, and salary. Each technician is an expert on one or more plane models, and expertise may overlap. Traffic controllers must have an annual medical examination; store the date of the most recent exam. All airport employees belong to a union; store the union membership number. Each employee is uniquely identified by SSN. The airport has a number of tests (each with FAA test number, name, maximum score) used periodically to ensure airplanes are airworthy. Track each time a given airplane is tested by a given technician using a test, recording the date, hours spent, and score received. Clearly specify the cardinalities and primary keys.",
+      "difficulty": "hard",
+      "topics": ["ER and EER Modeling"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q6a" }
+      ]
+    },
+    {
+      "question_text": "Map the airport ER diagram to create the relational model. Indicate primary keys as well as referential integrity constraints.",
+      "difficulty": "hard",
+      "topics": ["ER to Relational Schema Mapping"],
+      "pyq_sources": [
+        { "year": 2025, "exam_type": "endsem", "season": "spring", "question_number": "Q6b" }
+      ]
+    },
+    {
+      "question_text": "Differentiate between Cartesian product and Join operation with suitable example.",
+      "difficulty": "easy",
+      "topics": ["Relational Algebra"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q1a" }
+      ]
+    },
+    {
+      "question_text": "What do you mean by inconsistent database? Discuss with suitable example.",
+      "difficulty": "easy",
+      "topics": ["Database System Fundamentals"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q1b" }
+      ]
+    },
+    {
+      "question_text": "What is aggregation? How is it represented using ER diagram? Give an example to support your answer.",
+      "difficulty": "medium",
+      "topics": ["ER and EER Modeling"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q1c" }
+      ]
+    },
+    {
+      "question_text": "Given the relations Students(Name, Marks, SchoolNo) and Schools(SchoolNo, SchoolName, Address), which of the following queries cannot be expressed using the basic relational algebra operations (σ, π, ×, ∪, −)? Justify. (A) School Address of every student (B) Students whose name is same as their school name (C) The sum of all students' marks (D) Name of students of a given school",
+      "difficulty": "medium",
+      "topics": ["Relational Algebra"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q1d" }
+      ]
+    },
+    {
+      "question_text": "Consider the Student table with columns rollNum (primary key), name, gender, marks. The SQL query executes: SELECT * FROM Student WHERE gender = 'M' AND marks > 65. What is the number of rows returned by the query? Justify. (Given data: Naman/M/62, Aliya/F/70, Aliya/F/80, James/M/82, Swati/F/65)",
+      "difficulty": "easy",
+      "topics": ["SQL"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q1e" }
+      ]
+    },
+    {
+      "question_text": "Write the ACID properties of transaction with citing one example of the 'I' (Isolation) property.",
+      "difficulty": "medium",
+      "topics": ["Transaction Management"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q1f" }
+      ]
+    },
+    {
+      "question_text": "Select the TRUE statement(s) from the following with justification: i. A relation R is in 3NF if every non-prime attribute of R is completely functionally dependent on every key of R. ii. Every relation in 3NF is also in BCNF. iii. No relation can be in both 3NF and BCNF. iv. Every relation in BCNF is also in 3NF.",
+      "difficulty": "medium",
+      "topics": ["Normalization"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q1g" }
+      ]
+    },
+    {
+      "question_text": "Given the following relation instance with attributes X, Y, Z: (1,4,2), (1,5,3), (1,6,3), (3,2,2). Which of the following functional dependencies are satisfied by the instance? (a) XY→Z and Z→Y (b) YZ→X and Y→Z (c) YZ→X and X→Z (d) XZ→Y and Y→X",
+      "difficulty": "medium",
+      "topics": ["Functional Dependencies"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q1h" }
+      ]
+    },
+    {
+      "question_text": "In a relation scheme R = (A, B, C, D, E, H) on which the following functional dependencies hold: {A→B, BC→D, E→C, D→A}. The candidate keys of R are: i. AE, BE ii. AE, BE, DE iii. AEH, BEH, BCH iv. AEH, BEH, DEH",
+      "difficulty": "hard",
+      "topics": ["Functional Dependencies", "Normalization"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q1i" }
+      ]
+    },
+    {
+      "question_text": "How many minimum internal nodes are required for 1000 leaf nodes of a B+ tree with order P=8? (Assume order P: maximum pointer per node.)",
+      "difficulty": "hard",
+      "topics": ["Indexing"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q1j" }
+      ]
+    },
+    {
+      "question_text": "Why is concurrency control needed? Explain the lost update problem, dirty read problem, and incorrect summary problem with suitable examples.",
+      "difficulty": "medium",
+      "topics": ["Concurrency Control"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q2a" }
+      ]
+    },
+    {
+      "question_text": "Describe the three-schema architecture. Why do we need mappings between schema levels? Also differentiate between logical data independence and physical data independence.",
+      "difficulty": "medium",
+      "topics": ["Data Models and Abstraction"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q2b" }
+      ]
+    },
+    {
+      "question_text": "Consider the relation E = (P, Q, R, S, T, U) with the following FDs: P→Q, P→R, QR→S, Q→T, QR→U, PR→U. Infer the following using Armstrong's Axioms and Additional inference rules: 1. P→T, 2. PR→S, 3. QR→SU, 4. PR→SU.",
+      "difficulty": "hard",
+      "topics": ["Functional Dependencies"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q3a" }
+      ]
+    },
+    {
+      "question_text": "Given the schema: employee(person_name, street, city), works(person_name, company_name, salary), company(company_name, city). Give the relational algebra and domain relational calculus expression for: i. Find the names of all employees whose salary is greater than 100000. ii. Find the names of all employees who are from Mumbai and works in Delhi.",
+      "difficulty": "hard",
+      "topics": ["Relational Algebra", "Relational Calculus"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q3b" }
+      ]
+    },
+    {
+      "question_text": "Consider the following relation R(M, Y, P, X, C) with dependencies F = {M→X, {M,Y}→P, X→C}. Consider the decomposition D = {R1(M, Y, P), R2(M, MP, C)}. Check whether this decomposition is lossless or lossy in a step by step manner.",
+      "difficulty": "hard",
+      "topics": ["Decomposition"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q4a" }
+      ]
+    },
+    {
+      "question_text": "What is 4NF? Give an example of a relation schema R and a set of dependencies such that R is in BCNF but not in 4NF.",
+      "difficulty": "hard",
+      "topics": ["Normalization"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q4b" }
+      ]
+    },
+    {
+      "question_text": "Find the canonical cover of the following FDs on R(VWXYZ): V→W, VW→X, Y→VWX.",
+      "difficulty": "hard",
+      "topics": ["Functional Dependencies"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q5a" }
+      ]
+    },
+    {
+      "question_text": "Consider a relation R(ABCDEF) with FDs: AB→CDEF, C→A, D→B, C→D, E→F, and B→E. What is the normal form of the relation?",
+      "difficulty": "hard",
+      "topics": ["Normalization", "Functional Dependencies"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q5b" }
+      ]
+    },
+    {
+      "question_text": "Consider the following two transactions: T1: read(A); read(B); if A=0, then B:=B+1; write(B). T2: read(B); read(A); if B=0, then A:=A+1; write(A). Add lock and unlock instructions to transactions T1 and T2 so that they observe the two-phase locking protocol. Can the execution of these transactions result in a deadlock?",
+      "difficulty": "hard",
+      "topics": ["Concurrency Control"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q6a" }
+      ]
+    },
+    {
+      "question_text": "Consider the following concurrent schedule S = R2(X), W3(X), W1(Y), R2(Y), W2(Z), R4(X), R4(Y). A) Check whether the above schedule is conflict serializable or not with required steps using precedence graph. B) If the above schedule is conflict serializable, then find all possible equivalent serial schedules.",
+      "difficulty": "hard",
+      "topics": ["Concurrency Control"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q6b" }
+      ]
+    },
+    {
+      "question_text": "Assume there are different IPL cricket teams with players in each team. Design an ER diagram capturing: Each team has an ID, name, stadium_name, and city. Each team has many players (each with a unique number, player_name, DoB, age as derived attribute, start year, shirt number). Teams play matches with a host and guest team in the host's stadium. Track for each match: date, final result, players participated with runs and wickets, player substitutions with time. Each match has exactly three umpires (bowler's end, square leg, third umpire) each with ID, name, multi-valued contact number, DoB, years of experience. State cardinalities and primary keys.",
+      "difficulty": "hard",
+      "topics": ["ER and EER Modeling"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q7a" }
+      ]
+    },
+    {
+      "question_text": "Map the IPL cricket team ERD to create the relational model. Indicate primary keys as well as referential integrity constraints.",
+      "difficulty": "hard",
+      "topics": ["ER to Relational Schema Mapping"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q7b" }
+      ]
+    },
+    {
+      "question_text": "Create a B+ tree of order 3 with the following data: 13, 2, 5, 63, 23, 11, 74.",
+      "difficulty": "hard",
+      "topics": ["Indexing"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q8a" }
+      ]
+    },
+    {
+      "question_text": "A relation R(A,B,C,D,E,G) with FDs: AB→C, AC→B, AD→E, B→D, BC→A, E→G. Decompose R into R1(A,B,C), R2(A,D,C,E), R3(A,D,G). Find the candidate keys of relation R. Check whether the above decomposition is lossy or lossless and whether it is dependency preserving or not. Justify your answers.",
+      "difficulty": "hard",
+      "topics": ["Normalization", "Functional Dependencies", "Decomposition"],
+      "pyq_sources": [
+        { "year": 2023, "exam_type": "endsem", "season": "spring", "question_number": "Q8b" }
+      ]
+    },
+    {
+      "question_text": "What are the various types of keys used in DBMS?",
+      "difficulty": "easy",
+      "topics": ["Relational Model"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1a" }
+      ]
+    },
+    {
+      "question_text": "BCNF is stronger than 3NF. Justify with a proper example.",
+      "difficulty": "medium",
+      "topics": ["Normalization"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1b" }
+      ]
+    },
+    {
+      "question_text": "List the disadvantages of a file processing system.",
+      "difficulty": "easy",
+      "topics": ["Database System Fundamentals"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1c" }
+      ]
+    },
+    {
+      "question_text": "Define the self-referential integrity constraint with a suitable example.",
+      "difficulty": "medium",
+      "topics": ["Relational Model"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1d" }
+      ]
+    },
+    {
+      "question_text": "Every candidate key is a super key but the reverse is not true. Justify.",
+      "difficulty": "easy",
+      "topics": ["Relational Model"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1e" }
+      ]
+    },
+    {
+      "question_text": "Write two commands of DML. Is the query 'SELECT empname, dno FROM EMP GROUP BY dno' for a relation EMP(eno, empname, dno) executed successfully? Justify.",
+      "difficulty": "medium",
+      "topics": ["SQL"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1f" }
+      ]
+    },
+    {
+      "question_text": "What is partial function dependency and multi-valued dependency?",
+      "difficulty": "easy",
+      "topics": ["Functional Dependencies", "Normalization"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1g" }
+      ]
+    },
+    {
+      "question_text": "When is a transaction said to be conflict serializable?",
+      "difficulty": "easy",
+      "topics": ["Concurrency Control"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1h" }
+      ]
+    },
+    {
+      "question_text": "Show that the FD X→YZ can be inferred from the FD set {X→Y, Y→Z}. Highlight the axiom rules used.",
+      "difficulty": "medium",
+      "topics": ["Functional Dependencies"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1i" }
+      ]
+    },
+    {
+      "question_text": "How is data integrity different from data security?",
+      "difficulty": "easy",
+      "topics": ["Database System Fundamentals"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q1j" }
+      ]
+    },
+    {
+      "question_text": "Suppose you are given a relation R(A,B,C,D,E) with functional dependencies: {C,E}→D, D→B, C→A. a. Find all candidate keys. b. Identify the best normal form that R satisfies. c. If the relation is not in BCNF, decompose it until it becomes BCNF.",
+      "difficulty": "hard",
+      "topics": ["Normalization", "Functional Dependencies", "Decomposition"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q2a" }
+      ]
+    },
+    {
+      "question_text": "What do you mean by canonical or minimal cover? Find the canonical cover of R=(X,Y,Z,W) with the set of FDs F = {X→XWY, XW→Z, Z→Y, XY→Z}.",
+      "difficulty": "hard",
+      "topics": ["Functional Dependencies"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q2b" }
+      ]
+    },
+    {
+      "question_text": "Check whether the following schedules are conflict serializable or not using a precedence graph: a) R4(X), R2(X), R3(X), W1(Y), W2(X), R3(Y), W2(Y). b) R1(X), R2(Z), R1(Z), R3(X), R3(Y), W1(X), W3(Y), R2(Y), W2(Z), W2(Y).",
+      "difficulty": "hard",
+      "topics": ["Concurrency Control"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q3a" }
+      ]
+    },
+    {
+      "question_text": "Explain briefly the two-phase locking protocol and the timestamp-based protocol.",
+      "difficulty": "medium",
+      "topics": ["Concurrency Control"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q3b" }
+      ]
+    },
+    {
+      "question_text": "Explain ACID property. How does the two-phase locking protocol guarantee serializability in a transaction? Provide a suitable example to justify your answer.",
+      "difficulty": "hard",
+      "topics": ["Transaction Management", "Concurrency Control"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q4a" }
+      ]
+    },
+    {
+      "question_text": "Concurrency control helps in managing simultaneous operations without conflicting with each other. Discuss with examples the following problems encountered during concurrency execution of transactions: I. Lost update problem. II. Dirty read problem.",
+      "difficulty": "medium",
+      "topics": ["Concurrency Control"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q4b" }
+      ]
+    },
+    {
+      "question_text": "Given the schema: Movie(moviename, makedate), Star(starname, age), Studio(studioname, city), Produce(studioname, moviename), Act(starname, moviename). Solve the following queries using relational algebra: a. Find the star details who appeared in 'ABC' movie. b. Find the stars who appeared in movies made in 2000. c. Find the star names who appeared in movies produced by studios located at 'Bhubaneswar'. d. Find the studio names where 'ABC' movie was made.",
+      "difficulty": "hard",
+      "topics": ["Relational Algebra"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q5a" }
+      ]
+    },
+    {
+      "question_text": "Draw the ER diagram for a Hospital management system. The database maintains details of doctors (name, designation, specialization) enrolled to departments and all employee information working for the department. Department identified by deptno and department name. There is a registration process required for all patients to a department before they are treated by any doctor. Patient details must contain name, address, and age. The database also keeps track of payment details once the patient is discharged. If the patient has any insurance policy (policyno, type, company) that information is also stored. Make necessary assumptions. Identify the primary and foreign keys.",
+      "difficulty": "hard",
+      "topics": ["ER and EER Modeling", "ER to Relational Schema Mapping"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q5b" }
+      ]
+    },
+    {
+      "question_text": "Suppose we have a data file with r = 50000 records stored on a disk with block size B = 1024 bytes. File records are of fixed size with record length R = 256 bytes. One multilevel index file is created on the file. Assume the length of each index entry is 16 bytes (key field size = 8 bytes, block pointer size = 8 bytes). Calculate: a) Blocking factor of data file and index file. b) Total number of blocks required for data file and index file.",
+      "difficulty": "hard",
+      "topics": ["Storage and File Structures", "Indexing"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q6a" }
+      ]
+    },
+    {
+      "question_text": "Explain about Hash-based Indexing and Tree-based Indexing.",
+      "difficulty": "medium",
+      "topics": ["Indexing"],
+      "pyq_sources": [
+        { "year": 2024, "exam_type": "endsem", "season": "spring", "question_number": "Q6b" }
+      ]
+    }
+  ]
+}
