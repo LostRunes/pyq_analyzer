@@ -9,7 +9,7 @@ load_dotenv()
 # ================= CONFIG =================
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-SUBJECT_ID = "900b8da2-9496-452b-95a2-b88bd4acba1d"
+SUBJECT_ID = "607ad3fc-3336-4a4e-bd03-d313f84faa78"
 
 HEADERS = {
     "apikey": SUPABASE_KEY,
@@ -42,7 +42,7 @@ def select(table, query=""):
     return res.json()
 
 # ================= LOAD JSON =================
-with open("ce_pyq_data.json", "r", encoding="utf-8") as f:
+with open("pe10002_pyq_data.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 topics = data["topics"]

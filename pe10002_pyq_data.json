@@ -1,0 +1,1196 @@
+{
+  "topics": [
+    {
+      "topic_name": "Introduction to Public Health",
+      "summary": "Core concepts of public health, its definition, multidisciplinary nature, and key achievements in the 21st century."
+    },
+    {
+      "topic_name": "Core Functions of Public Health",
+      "summary": "The three core functions of public health: assessment, policy development, and assurance, and how engineers can contribute to each."
+    },
+    {
+      "topic_name": "Determinants of Health",
+      "summary": "Biological, social, environmental, and behavioral factors that influence individual and population health outcomes."
+    },
+    {
+      "topic_name": "Social Determinants of Health",
+      "summary": "WHO and CDC models of social determinants including poverty, education, housing, and how they shape disease and health."
+    },
+    {
+      "topic_name": "Epidemiology Fundamentals",
+      "summary": "Definition, scope, and history of epidemiology including John Snow's cholera investigation and the germ theory of disease."
+    },
+    {
+      "topic_name": "Epidemiological Triad",
+      "summary": "The agent-host-environment model used to explain disease causation and the interplay between these three elements."
+    },
+    {
+      "topic_name": "Measures of Disease Frequency",
+      "summary": "Epidemiological measures including incidence, prevalence, and other morbidity indicators used to quantify disease burden."
+    },
+    {
+      "topic_name": "Measures of Association",
+      "summary": "Relative risk, odds ratio, and other statistical measures used in epidemiology to quantify the relationship between exposure and disease."
+    },
+    {
+      "topic_name": "Natural History of Disease",
+      "summary": "The two phases of disease progression: pre-pathogenesis (before disease onset) and pathogenesis (after disease onset), including incubation and latent periods."
+    },
+    {
+      "topic_name": "Disease Prevention",
+      "summary": "Primary, secondary, and tertiary prevention strategies, their definitions, examples, and the role of engineers in each level."
+    },
+    {
+      "topic_name": "Epidemiological Study Designs",
+      "summary": "Overview of cross-sectional, case-control, cohort studies, and randomized controlled trials (RCTs), including their strengths and limitations."
+    },
+    {
+      "topic_name": "Epidemiological Surveillance",
+      "summary": "Definition and types of surveillance including active and passive surveillance, and their application in public health monitoring."
+    },
+    {
+      "topic_name": "Outbreak Investigation",
+      "summary": "Systematic steps taken to investigate and control a disease outbreak in a community."
+    },
+    {
+      "topic_name": "Screening Tests",
+      "summary": "Concepts of validity (sensitivity and specificity) and reliability in the context of public health screening programs."
+    },
+    {
+      "topic_name": "Environmental Health",
+      "summary": "WHO definition of environmental health, key environmental risk factors, and the impact of pollution and climate change on human health."
+    },
+    {
+      "topic_name": "Environmental Pollution and Health",
+      "summary": "Types of environmental pollution (air, water, soil) and their specific effects on human health with examples."
+    },
+    {
+      "topic_name": "Water Pollution and Engineering Solutions",
+      "summary": "Health effects of water pollution and how engineering advancements such as treatment technologies can address them."
+    },
+    {
+      "topic_name": "Environmental Sanitation",
+      "summary": "Definition, importance of sanitation for public health, and related engineering interventions."
+    },
+    {
+      "topic_name": "International Environmental Conventions",
+      "summary": "Key global environmental agreements including the Basel Convention, Rio Earth Summit outcomes, and their objectives."
+    },
+    {
+      "topic_name": "Urbanization and Health",
+      "summary": "How rapid urban growth affects population health, including slum living conditions, pollution, and lifestyle changes."
+    },
+    {
+      "topic_name": "Health Promotion",
+      "summary": "Definition of health promotion, Ottawa Charter components, and strategies for implementing health promotion in occupational or academic settings."
+    },
+    {
+      "topic_name": "Health Behavior Change Models",
+      "summary": "Health Belief Model, Transtheoretical Model, and Theory of Planned Behavior — their constructs, key concepts, and application in public health interventions."
+    },
+    {
+      "topic_name": "Engineering Applications in Public Health",
+      "summary": "How engineering disciplines contribute to disease prevention, environmental health, sanitation, and public health system strengthening."
+    },
+    {
+      "topic_name": "Communicable and Non-Communicable Diseases",
+      "summary": "Distinction between infectious and chronic diseases, their burden, and the engineer's role in reducing non-communicable disease prevalence."
+    },
+    {
+      "topic_name": "Statistics in Public Health",
+      "summary": "Definition and applications of statistics in public health, including data collection, analysis, and interpretation."
+    },
+    {
+      "topic_name": "Variables and Scales of Measurement",
+      "summary": "Types of variables (categorical, continuous) and the four scales of measurement: nominal, ordinal, interval, and ratio, with examples."
+    },
+    {
+      "topic_name": "Measures of Central Tendency",
+      "summary": "Calculation and interpretation of mean, median, and mode for public health datasets."
+    },
+    {
+      "topic_name": "Health Management Information System (HMIS)",
+      "summary": "Definition, applications, strengths, and role of HMIS in managing health data and supporting decision-making in public health."
+    },
+    {
+      "topic_name": "Health Economics",
+      "summary": "Concepts of cost-benefit analysis, QALY (Quality-Adjusted Life Year), and economic evaluation methods used in public health priority-setting."
+    },
+    {
+      "topic_name": "Disease and Poverty",
+      "summary": "The vicious cycle linking disease burden and poverty, and strategies including engineering interventions to break this cycle."
+    }
+  ],
+  "questions": [
+    {
+      "question_text": "What is Health Management Information System (HMIS)?",
+      "difficulty": "easy",
+      "topics": ["Health Management Information System (HMIS)"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1a"
+        }
+      ]
+    },
+    {
+      "question_text": "Define the term 'epidemiology'.",
+      "difficulty": "easy",
+      "topics": ["Epidemiology Fundamentals"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1b"
+        },
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1h"
+        }
+      ]
+    },
+    {
+      "question_text": "What is the relevance of QALY in public health?",
+      "difficulty": "easy",
+      "topics": ["Health Economics"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1c"
+        }
+      ]
+    },
+    {
+      "question_text": "What does QALY stand for and what is its purpose?",
+      "difficulty": "easy",
+      "topics": ["Health Economics"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1e"
+        },
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1h"
+        }
+      ]
+    },
+    {
+      "question_text": "What is the acronym of RCT?",
+      "difficulty": "easy",
+      "topics": ["Epidemiological Study Designs"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1d"
+        }
+      ]
+    },
+    {
+      "question_text": "What is the main objective of the Basel Convention?",
+      "difficulty": "easy",
+      "topics": ["International Environmental Conventions"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1e"
+        },
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1f"
+        }
+      ]
+    },
+    {
+      "question_text": "What do you mean by 'epidemiological triad'?",
+      "difficulty": "easy",
+      "topics": ["Epidemiological Triad"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1f"
+        }
+      ]
+    },
+    {
+      "question_text": "What are the three elements of the Epidemiological Triad?",
+      "difficulty": "easy",
+      "topics": ["Epidemiological Triad"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1b"
+        }
+      ]
+    },
+    {
+      "question_text": "Name any two measures of morbidity.",
+      "difficulty": "easy",
+      "topics": ["Measures of Disease Frequency"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1g"
+        },
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1d"
+        }
+      ]
+    },
+    {
+      "question_text": "What is cost benefit analysis?",
+      "difficulty": "easy",
+      "topics": ["Health Economics"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1h"
+        },
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1b"
+        }
+      ]
+    },
+    {
+      "question_text": "Define 'environmental health' as per WHO.",
+      "difficulty": "easy",
+      "topics": ["Environmental Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1i"
+        }
+      ]
+    },
+    {
+      "question_text": "What do you mean by determinants of health?",
+      "difficulty": "easy",
+      "topics": ["Determinants of Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1j"
+        }
+      ]
+    },
+    {
+      "question_text": "Public health is a multidisciplinary domain. Where do engineers fit in? Discuss and substantiate with suitable examples.",
+      "difficulty": "medium",
+      "topics": ["Introduction to Public Health", "Engineering Applications in Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q2a"
+        },
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q8b"
+        },
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q4a"
+        }
+      ]
+    },
+    {
+      "question_text": "Discuss the key achievements of public health in the 21st century. According to you, which one is the most significant achievement and why?",
+      "difficulty": "medium",
+      "topics": ["Introduction to Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q2b"
+        }
+      ]
+    },
+    {
+      "question_text": "Discuss how you can adopt health promotion strategies in your department/college or any occupational setting of your choice.",
+      "difficulty": "medium",
+      "topics": ["Health Promotion"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q3a"
+        }
+      ]
+    },
+    {
+      "question_text": "What do you mean by environment? How does environmental pollution affect health?",
+      "difficulty": "medium",
+      "topics": ["Environmental Health", "Environmental Pollution and Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q3b"
+        },
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q5a"
+        }
+      ]
+    },
+    {
+      "question_text": "What are the possible effects of water pollution on health and how can recent advancements in engineering address water pollution?",
+      "difficulty": "medium",
+      "topics": ["Water Pollution and Engineering Solutions", "Engineering Applications in Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q4a"
+        }
+      ]
+    },
+    {
+      "question_text": "What are the different types of disease prevention? What roles can engineers play in tertiary prevention? Discuss with suitable examples.",
+      "difficulty": "medium",
+      "topics": ["Disease Prevention", "Engineering Applications in Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q4b"
+        }
+      ]
+    },
+    {
+      "question_text": "Define the term 'Statistics'. Discuss a few applications of statistics in the field of public health with appropriate examples.",
+      "difficulty": "medium",
+      "topics": ["Statistics in Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q5a"
+        }
+      ]
+    },
+    {
+      "question_text": "What are the key social determinants of health? Choose any one social determinant and discuss how as an engineer you would address it.",
+      "difficulty": "hard",
+      "topics": ["Social Determinants of Health", "Engineering Applications in Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q5b"
+        }
+      ]
+    },
+    {
+      "question_text": "What is surveillance in epidemiology? Discuss active and passive surveillance with appropriate examples.",
+      "difficulty": "medium",
+      "topics": ["Epidemiological Surveillance"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q6a"
+        },
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q3b"
+        },
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q8b"
+        }
+      ]
+    },
+    {
+      "question_text": "What is the difference between case-control and cohort studies?",
+      "difficulty": "medium",
+      "topics": ["Epidemiological Study Designs"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q6b"
+        },
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q7b"
+        }
+      ]
+    },
+    {
+      "question_text": "Discuss the three core functions of public health. Choose any one of the core functions and discuss how, as an engineer, you can contribute in that domain.",
+      "difficulty": "hard",
+      "topics": ["Core Functions of Public Health", "Engineering Applications in Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q7a"
+        },
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q5b"
+        },
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q3b"
+        }
+      ]
+    },
+    {
+      "question_text": "What is a 'variable'? What are the scales of measurement of variables? Provide relevant examples for each scale.",
+      "difficulty": "medium",
+      "topics": ["Variables and Scales of Measurement"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q7b"
+        }
+      ]
+    },
+    {
+      "question_text": "Use the Health Belief Model to detail and discuss the challenges of addressing risky drinking among college students.",
+      "difficulty": "hard",
+      "topics": ["Health Behavior Change Models"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q8a"
+        }
+      ]
+    },
+    {
+      "question_text": "Determine the mean, median and mode for the following dataset: 20, 18, 15, 30, 24, 25, 21, 30, 21, 21, 16.",
+      "difficulty": "easy",
+      "topics": ["Measures of Central Tendency"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q8b"
+        }
+      ]
+    },
+    {
+      "question_text": "What is public health?",
+      "difficulty": "easy",
+      "topics": ["Introduction to Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1a"
+        }
+      ]
+    },
+    {
+      "question_text": "What do you mean by determinants of disease?",
+      "difficulty": "easy",
+      "topics": ["Determinants of Health", "Epidemiology Fundamentals"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1c"
+        }
+      ]
+    },
+    {
+      "question_text": "Give one example of secondary prevention.",
+      "difficulty": "easy",
+      "topics": ["Disease Prevention"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1d"
+        }
+      ]
+    },
+    {
+      "question_text": "Mention two key conventions developed as a result of the Rio Earth Summit (1992).",
+      "difficulty": "easy",
+      "topics": ["International Environmental Conventions"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1e"
+        }
+      ]
+    },
+    {
+      "question_text": "Define the term 'incidence'.",
+      "difficulty": "easy",
+      "topics": ["Measures of Disease Frequency"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1g"
+        }
+      ]
+    },
+    {
+      "question_text": "Define the term 'health promotion'.",
+      "difficulty": "easy",
+      "topics": ["Health Promotion"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1i"
+        }
+      ]
+    },
+    {
+      "question_text": "What do you understand by the Mode of a variable?",
+      "difficulty": "easy",
+      "topics": ["Measures of Central Tendency", "Variables and Scales of Measurement"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1j"
+        },
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1f"
+        }
+      ]
+    },
+    {
+      "question_text": "What is the Germ Theory of Disease? Describe.",
+      "difficulty": "medium",
+      "topics": ["Epidemiology Fundamentals"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q2a"
+        },
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q2b"
+        }
+      ]
+    },
+    {
+      "question_text": "What are the different scales of measurement of variables?",
+      "difficulty": "medium",
+      "topics": ["Variables and Scales of Measurement"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q2b"
+        },
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q6a"
+        }
+      ]
+    },
+    {
+      "question_text": "There are two phases in the natural history of disease. Describe about them.",
+      "difficulty": "medium",
+      "topics": ["Natural History of Disease"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q3a"
+        }
+      ]
+    },
+    {
+      "question_text": "How do environmental risk factors impact human health? Discuss with appropriate examples.",
+      "difficulty": "medium",
+      "topics": ["Environmental Health", "Environmental Pollution and Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q4a"
+        }
+      ]
+    },
+    {
+      "question_text": "What is a case-control study design? Discuss.",
+      "difficulty": "medium",
+      "topics": ["Epidemiological Study Designs"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q4b"
+        }
+      ]
+    },
+    {
+      "question_text": "What are the applications and strengths of the Health Management Information System (HMIS)?",
+      "difficulty": "medium",
+      "topics": ["Health Management Information System (HMIS)"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q5a"
+        },
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q5a"
+        }
+      ]
+    },
+    {
+      "question_text": "What is the Health Belief Model? Discuss its various constructs and key concepts.",
+      "difficulty": "medium",
+      "topics": ["Health Behavior Change Models"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q6a"
+        }
+      ]
+    },
+    {
+      "question_text": "What are the steps of an Outbreak Investigation?",
+      "difficulty": "medium",
+      "topics": ["Outbreak Investigation"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q6b"
+        }
+      ]
+    },
+    {
+      "question_text": "Discuss any four applications of engineering sciences in addressing environmental health.",
+      "difficulty": "hard",
+      "topics": ["Engineering Applications in Public Health", "Environmental Health"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q7a"
+        }
+      ]
+    },
+    {
+      "question_text": "What is reliability and validity of a screening test? Discuss.",
+      "difficulty": "medium",
+      "topics": ["Screening Tests"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q7b"
+        }
+      ]
+    },
+    {
+      "question_text": "Mention five key components for health promotion set out by the Ottawa Charter on Health Promotion.",
+      "difficulty": "medium",
+      "topics": ["Health Promotion"],
+      "pyq_sources": [
+        {
+          "year": 2023,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q8a"
+        }
+      ]
+    },
+    {
+      "question_text": "List three core functions of public health.",
+      "difficulty": "easy",
+      "topics": ["Core Functions of Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1a"
+        }
+      ]
+    },
+    {
+      "question_text": "Give examples of two diseases that are spread by droplet infection.",
+      "difficulty": "easy",
+      "topics": ["Epidemiology Fundamentals", "Communicable and Non-Communicable Diseases"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1c"
+        }
+      ]
+    },
+    {
+      "question_text": "List three environmental factors affecting human health.",
+      "difficulty": "easy",
+      "topics": ["Environmental Health", "Determinants of Health"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1g"
+        }
+      ]
+    },
+    {
+      "question_text": "According to John Snow, what was the mode of transmission of Cholera in the London outbreak in 1854?",
+      "difficulty": "easy",
+      "topics": ["Epidemiology Fundamentals"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1h"
+        }
+      ]
+    },
+    {
+      "question_text": "Write the WHO definition of Health.",
+      "difficulty": "easy",
+      "topics": ["Introduction to Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1i"
+        }
+      ]
+    },
+    {
+      "question_text": "Name three behavior change models used in public health.",
+      "difficulty": "easy",
+      "topics": ["Health Behavior Change Models"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q1j"
+        }
+      ]
+    },
+    {
+      "question_text": "What is tertiary prevention? Provide examples.",
+      "difficulty": "easy",
+      "topics": ["Disease Prevention"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q2a"
+        }
+      ]
+    },
+    {
+      "question_text": "What do you mean by social determinants of health? Provide suitable examples.",
+      "difficulty": "medium",
+      "topics": ["Social Determinants of Health"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q3a"
+        }
+      ]
+    },
+    {
+      "question_text": "What do you understand by incubation period? How is it different from latent period?",
+      "difficulty": "medium",
+      "topics": ["Natural History of Disease"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q3b"
+        }
+      ]
+    },
+    {
+      "question_text": "What is the difference between categorical and continuous variables? Give examples of each.",
+      "difficulty": "easy",
+      "topics": ["Variables and Scales of Measurement"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q4b"
+        }
+      ]
+    },
+    {
+      "question_text": "Why is sanitation important for good health? Explain.",
+      "difficulty": "medium",
+      "topics": ["Environmental Sanitation"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q5b"
+        }
+      ]
+    },
+    {
+      "question_text": "Explain why health promotion is important.",
+      "difficulty": "medium",
+      "topics": ["Health Promotion"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q6b"
+        }
+      ]
+    },
+    {
+      "question_text": "How does rapid growth in urbanization affect human health? Answer with suitable examples.",
+      "difficulty": "medium",
+      "topics": ["Urbanization and Health"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q7a"
+        },
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q2a"
+        }
+      ]
+    },
+    {
+      "question_text": "How can engineering sciences be applied to prevent diseases?",
+      "difficulty": "hard",
+      "topics": ["Engineering Applications in Public Health", "Disease Prevention"],
+      "pyq_sources": [
+        {
+          "year": 2022,
+          "exam_type": "endsem",
+          "season": "autumn",
+          "question_number": "Q8a"
+        }
+      ]
+    },
+    {
+      "question_text": "What do you mean by 'public health'? Why is it said that 'health is wealth'?",
+      "difficulty": "easy",
+      "topics": ["Introduction to Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1a"
+        }
+      ]
+    },
+    {
+      "question_text": "What is the major limitation of the Germ Theory of Disease?",
+      "difficulty": "easy",
+      "topics": ["Epidemiology Fundamentals"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1b"
+        }
+      ]
+    },
+    {
+      "question_text": "Give any two examples of measures of 'association' in epidemiology.",
+      "difficulty": "easy",
+      "topics": ["Measures of Association"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1c"
+        }
+      ]
+    },
+    {
+      "question_text": "What is the 'Ordinal Scale' of measurement in statistics?",
+      "difficulty": "easy",
+      "topics": ["Variables and Scales of Measurement"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1d"
+        }
+      ]
+    },
+    {
+      "question_text": "Give two examples of 'mechanical agents' responsible for disease causation.",
+      "difficulty": "easy",
+      "topics": ["Epidemiological Triad", "Epidemiology Fundamentals"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1e"
+        }
+      ]
+    },
+    {
+      "question_text": "Define 'environmental sanitation'.",
+      "difficulty": "easy",
+      "topics": ["Environmental Sanitation"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1f"
+        }
+      ]
+    },
+    {
+      "question_text": "'Medical Anthropology' is the study of ________?",
+      "difficulty": "easy",
+      "topics": ["Social Determinants of Health"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1g"
+        }
+      ]
+    },
+    {
+      "question_text": "What is the ecological concept of health?",
+      "difficulty": "easy",
+      "topics": ["Introduction to Public Health", "Environmental Health"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1i"
+        }
+      ]
+    },
+    {
+      "question_text": "What are the major environmental risk factors?",
+      "difficulty": "easy",
+      "topics": ["Environmental Health"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q1j"
+        }
+      ]
+    },
+    {
+      "question_text": "Discuss the vicious cycle of 'Disease and Poverty'. As an engineer, what can you do to break this cycle?",
+      "difficulty": "hard",
+      "topics": ["Disease and Poverty", "Engineering Applications in Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q2b"
+        }
+      ]
+    },
+    {
+      "question_text": "Observations indicate a rising prevalence of smokeless tobacco (SLT) consumption among students at your college. What strategies would you propose to mitigate SLT usage among the student population?",
+      "difficulty": "hard",
+      "topics": ["Health Behavior Change Models", "Health Promotion"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q3a"
+        }
+      ]
+    },
+    {
+      "question_text": "Distinguish between communicable and non-communicable diseases, providing appropriate examples. Discuss the potential role of engineers in alleviating the burden of non-communicable diseases.",
+      "difficulty": "hard",
+      "topics": ["Communicable and Non-Communicable Diseases", "Engineering Applications in Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q4a"
+        }
+      ]
+    },
+    {
+      "question_text": "Discuss how statistical summary measures are used in the public health sector. Calculate the mean, median, and mode of the following dataset: 7, 11, 13, 5, 9, 11, 10, 8, 17, 15.",
+      "difficulty": "medium",
+      "topics": ["Statistics in Public Health", "Measures of Central Tendency"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q4b"
+        }
+      ]
+    },
+    {
+      "question_text": "Discuss the key drivers that influence 'intention' within the Theory of Planned Behavior framework.",
+      "difficulty": "medium",
+      "topics": ["Health Behavior Change Models"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q5b"
+        }
+      ]
+    },
+    {
+      "question_text": "What do you mean by prevention? What are the different stages of disease prevention? Describe with appropriate examples from each. Discuss the application of engineering science in disease prevention.",
+      "difficulty": "hard",
+      "topics": ["Disease Prevention", "Engineering Applications in Public Health"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q6a"
+        }
+      ]
+    },
+    {
+      "question_text": "Describe briefly the epidemiological study designs. In your opinion, which study design would be appropriate to evaluate the effectiveness of a new vaccine?",
+      "difficulty": "hard",
+      "topics": ["Epidemiological Study Designs"],
+      "pyq_sources": [
+        {
+          "year": 2024,
+          "exam_type": "endsem",
+          "season": "spring",
+          "question_number": "Q6b"
+        }
+      ]
+    }
+  ]
+}
